@@ -6,7 +6,7 @@
 	Author: Agent Evolution
 	Author URI: http://agentevolution.com
 
-	Version: 1.0.3
+	Version: 1.0.4
 
 	License: GNU General Public License v2.0 (or later)
 	License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -87,7 +87,7 @@ function wp_listings_init() {
 		}
 
         if ( file_exists(dirname( __FILE__ ) . '/includes/css/wp-listings.css') ) {
-        	wp_register_style('wp_listings', WP_LISTINGS_URL . '/includes/css/wp-listings.css');
+        	wp_register_style('wp_listings', WP_LISTINGS_URL . 'includes/css/wp-listings.css');
             wp_enqueue_style('wp_listings');
         }
     }
@@ -101,7 +101,7 @@ function wp_listings_init() {
 		}
 
         if ( file_exists(dirname( __FILE__ ) . '/includes/css/wp-listings-widgets.css') ) {
-        	wp_register_style('wp_listings_widgets', WP_LISTINGS_URL . '/includes/css/wp-listings-widgets.css');
+        	wp_register_style('wp_listings_widgets', WP_LISTINGS_URL . 'includes/css/wp-listings-widgets.css');
             wp_enqueue_style('wp_listings_widgets');
         }
     }
