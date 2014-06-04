@@ -3,7 +3,7 @@ Contributors: agentevolution, davebonds, chadajohnson
 Tags: real estate, listings, property, properties, listing search, idx, agentpress
 Requires at least: 3.2
 Tested up to: 3.9
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 
 Creates a portable listing management system for your WordPress site. Designed to work with any theme using built-in templates.
 
@@ -103,6 +103,11 @@ For more FAQ's visit [agentevolution.com](http://www.agentevolution.com/shop/wp-
 8. Listing archive template display
 
 == Changelog ==
+
+= 1.0.5 =
+* Updated class output for listing status overlay to remove spaces and replace with hyphens
+* Remove unused Categories column from admin page
+* Remove faulty responsive video CSS. Use fitvids.js instead for videos on single listings
 
 = 1.0.4 =
 * Add HTML classes for CSS layout compatibility with a number of various themes

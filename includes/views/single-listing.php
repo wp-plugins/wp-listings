@@ -9,8 +9,9 @@
 add_action('wp_enqueue_scripts', 'enqueue_single_listing_scripts');
 function enqueue_single_listing_scripts() {
 	wp_enqueue_style( 'wp-listings-single' );
-	wp_enqueue_style('font-awesome-more');
+	wp_enqueue_style('font-awesome');
 	wp_enqueue_script( 'jquery-validate', array('jquery'), true, true );
+	wp_enqueue_script( 'fitvids', array('jquery'), true, true );
 	wp_enqueue_script( 'wp-listings-single', array('jquery, jquery-ui-tabs', 'jquery-validate'), true, true );
 }
 
@@ -25,7 +26,7 @@ function single_listing_post_content() {
 		<div class="listing-image-wrap">
 			<?php echo get_the_post_thumbnail( $post->ID, 'listings-full', array('class' => 'single-listing-image') );
 			if ( '' != wp_listings_get_status() ) {
-				printf( '<span class="listing-status %s">%s</span>', strtolower(wp_listings_get_status()), wp_listings_get_status() );
+				printf( '<span class="listing-status %s">%s</span>', strtolower(str_replace(' ', '-', wp_listings_get_status())), wp_listings_get_status() );
 			}
 			if ( '' != get_post_meta( $post->ID, '_listing_open_house', true ) ) {
 				printf( '<span class="listing-open-house">Open House: %s</span>', get_post_meta( $post->ID, '_listing_open_house', true ) );
