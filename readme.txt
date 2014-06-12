@@ -3,13 +3,13 @@ Contributors: agentevolution, davebonds, chadajohnson
 Tags: real estate, listings, property, properties, listing search, idx, agentpress
 Requires at least: 3.2
 Tested up to: 3.9
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 
-Creates a portable listing management system for your WordPress site. Designed to work with any theme using built-in templates.
+Creates a portable real estate listing management system. Designed to work with any theme using built-in templates.
 
 == Description ==
 
-WP Listings uses custom post types, custom taxonomies, and widgets to create a listing management system for WordPress. It includes custom templates and widgets for front end display.
+WP Listings uses custom post types, taxonomies, templates, and widgets to create a listing management system for WordPress. It includes custom templates and widgets for front end display.
 
 View a demo of the plugin in action: [WP Listings demo](http://demo.wp-listings.com/)
 
@@ -50,11 +50,11 @@ Custom data fields include:
 
 Single listings display the custom data automatically with no need to insert shortcodes to display listing data. If it's entered, it will display on the page.
 
-Intergrates with the [Genesis Agent Profiles](http://wordpress.org/plugins/genesis-agent-profiles/) plugin to display the listing agent(s).
+Integrates with the [Genesis Agent Profiles](http://wordpress.org/plugins/genesis-agent-profiles/) plugin to display the listing agent(s).
 
 Single listings include a contact form for visitors to inquire about a property, or the form can be replaced with your own form plugin shortcode.
 
-Allows for any number of custom single listing templates to be created and displayed on a per listing basis. 
+Allows for any number of custom single listing templates to be created and displayed on a per listing basis.
 
 Premium Single Listing Templates available at [agentevolution.com](http://www.agentevolution.com/product-category/listing-templates/).
 
@@ -103,6 +103,10 @@ For more FAQ's visit [agentevolution.com](http://www.agentevolution.com/shop/wp-
 8. Listing archive template display
 
 == Changelog ==
+
+= 1.0.7 =
+* Add Genesis CPT archive settings support
+* Remove widget list item margins affecting some themes
 
 = 1.0.6 =
 * Add classes to search widget output for additional styling
