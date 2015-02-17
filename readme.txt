@@ -1,9 +1,9 @@
 === WP Listings ===
-Contributors: agentevolution, davebonds, chadajohnson
+Contributors: agentevolution, davebonds, chadajohnson, idxbroker
 Tags: real estate, listings, property, properties, listing search, idx, agentpress
 Requires at least: 3.7
-Tested up to: 4.0
-Stable tag: 1.1.3
+Tested up to: 4.1
+Stable tag: 1.2
 
 Creates a portable real estate listing management system. Designed to work with any theme using built-in templates.
 
@@ -104,6 +104,26 @@ Single Listing Template: Test Template
 Description: Give it a description to help identify
 */`
 
+= How can I remove the default property status terms or property type terms? =
+
+Its possible to remove the default property status terms by using a filter in your theme or custom plugins. Here is an example for the status terms:
+
+`/* Remove Default Status Terms from WP Listings */
+add_filter( 'wp_listings_default_status_terms', 'custom_default_status_terms' );
+function custom_default_status_terms() {
+  $status_terms = array();
+  return $status_terms;
+}`
+
+Here is an example for the property terms:
+
+`/* Remove Default Property Terms from WP Listings */
+add_filter( 'wp_listings_default_property_type_terms', 'custom_default_property_type_terms' );
+function custom_default_property_type_terms() {
+  $property_type_terms = array();
+  return $property_type_terms;
+}`
+
 For more FAQ's visit [agentevolution.com](http://www.agentevolution.com/shop/wp-listings/)
 
 == Screenshots ==
@@ -125,6 +145,20 @@ For more FAQ's visit [agentevolution.com](http://www.agentevolution.com/shop/wp-
 8. Listing archive template display
 
 == Changelog ==
+
+= 1.2 =
+* Added basic schema support to Single Listings Template (single-listing.php)
+* Added basic anti-spam check to native contact form in single-listing.php
+* Added support for Jetpack publicize and markdown editors
+* Added Jetpack shortcode links in messages about shortcodes
+* Added DNS Prefetch Support for scripts used on Single Listings Template
+* Added translation to text strings in listings shortcode
+* Minified CSS for better site performance, SCSS files included
+* Updates to script calls to improve site performance
+* Updated jQuery Validate to 1.13.1
+* Updated to Font Awesome 4.3.0
+* Updated .pot file
+* Fixed WP 4.1 issue with photo gallery editor meta box
 
 = 1.1.3 =
 * Set with_front on rewrite rules for taxonomies. h/t bhubbard
